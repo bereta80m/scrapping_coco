@@ -10,7 +10,10 @@ export default async function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
      Home
-     <form action={HandleFetching}>
+     <form action={async()=>{
+      "use server"
+      await HandleFetching()
+     }}>
           <button>Execute</button>
      </form>
     </main>
