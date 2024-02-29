@@ -45,7 +45,9 @@ export async function GET(request: Request) {
 const obtenerProxies = async () => {
     try {
       const url = "https://free-proxy-list.net/"; // Reemplaza esta URL por la URL real a la que necesitas acceder
-      const browser = await puppeteer.launch();
+      const browser = await puppeteer.launch({
+        args:['--no-sandbox']
+      });
       const page = await browser.newPage();
       await page.goto(url, { waitUntil: 'networkidle2' });
   
