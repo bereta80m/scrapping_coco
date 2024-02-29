@@ -10,7 +10,7 @@ export default async function Home() {
      Home
      <form action={async()=>{
       "use server"
-      await fetch(`http://localhost:3000/Scrapp`)
+      await fetch(`https://scrapping-coco.vercel.app/Scrapp`)
      }}>
           <button>Execute</button>
      </form>
